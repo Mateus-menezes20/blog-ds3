@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMENTÁRIOS</title>
+    <style>
+        body {
+            background-image: url('wp12450938.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: rgb(208, 204, 204);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-size: 18px;
+            margin: 20px;
+            text-align: justify;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            font-size: 36px;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+        h2 {
+            font-size: 22px;
+            padding: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #comentario-box {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+        }
+        textarea {
+            width: 100%;
+            height: 80px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #ff8000;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: rgba(0, 0, 0, 0.6);
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>COMENTÁRIOS</h1>
+    <p>Aqui você poderá deixar seu comentário!</p>
+
+    <div id="comentario-box">
+        <textarea id="comentario" placeholder="Digite seu comentário..."></textarea>
+        <button onclick="adicionarComentario()">Enviar</button>
+    </div>
+    
+    <h2>Comentários:</h2>
+    <ul id="lista-comentarios"></ul>
+
+    <script>
+        function adicionarComentario() {
+            var comentario = document.getElementById("comentario").value;
+            if (comentario.trim() !== "") {
+                var lista = document.getElementById("lista-comentarios");
+                var novoComentario = document.createElement("li");
+                novoComentario.textContent = comentario;
+                lista.appendChild(novoComentario);
+                document.getElementById("comentario").value = "";
+            }
+        }
+    </script>
+</body>
+
+<nav>
+    <a href="darks3.html">Inicio</a>
+</nav>
+
+
+
+</html>
+
+
